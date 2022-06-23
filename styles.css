@@ -101,7 +101,7 @@ text-decoration: underline;
   display: flex;
 }
 ul, 
-sol {
+ol {
   list-style-type: none;
 }
 .list-menu{
@@ -240,10 +240,29 @@ nav .portfolio:focus {
 .section .but:hover {
   border-radius: 4px;
 }
+.clients{
+  font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin: 0px;
+    margin-bottom: 50px;
+}
+.list-clients{
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding-top: 20px;
+}
 .icon,
 .corpos{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   height: 120px;
   padding: 25px 0;
   border-radius: 4px;
@@ -450,6 +469,7 @@ img {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  margin: 0px;
   padding-bottom: 20px;
   justify-content: space-between;
   line-height: 36px;
@@ -457,20 +477,15 @@ img {
  
 }
 .blue-hover{
-  z-index: 1;
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border: 1px solid var(--white);
   margin-bottom: 30px;
-  max-width: 370px;
-  height: 404px;
-  margin: 15px;
-  list-style-type: none;
-  flex-basis: calc((100%-30px)/3);
   background: var(--white);
   border: 0px;
-  overflow: hidden;
   cursor: pointer;
-  transition: 250ms var(--transition);
-  transition-property: box-shadow;
+ 
 }
 .blue-hover > img{
   object-fit: cover;
@@ -481,36 +496,35 @@ img {
 
 
 .secret-text{
-  z-index: 998;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
-  opacity: 90%;
   transform: translateY(100%);
   transition: var(--transition);
   transition-property: transform;
   transition-timing-function: ease;
-    transition-delay: 0s;
+  transition-delay: 0s;
   }
 
-  .secret-text>p{
-    text-align: left;
-      padding-top: 49px;
-      padding-left: 24px;
-      padding-right: 45px;
-      font-family: "Roboto";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 28px;
-      letter-spacing: 0.03em;
-      color: #ffffff;
+.secret-text p{
+  text-align: left;
+  padding-top: 49px;
+  padding-left: 24px;
+  padding-right: 24px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0;
+  letter-spacing: 0.03em;
+  color: #ffffff;
 }
 .underscore{
-  z-index: 999;
+  z-index: 1001;
   background-color: #fff;
   bottom: 0;
   left: 0;
@@ -518,11 +532,35 @@ img {
   margin-top: -6px;
   list-style: none;
   position: absolute;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-top: 20px;
   border-right: 1px solid #EEEEEE;
   border-left: 1px solid #EEEEEE;
   border-bottom: 1px solid #EEEEEE;
   letter-spacing: 0.03em;
 }  
+.underscore h3{
+  width: 322px;
+  height: 36px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: 0.06em;
+  margin: 0px;
+  padding: 0px;
+  padding-bottom: 4px;
+}
+.underscore p{
+  color: #757575;
+    width: 322px;
+    height: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.03em;
+    margin: 0px;
+}
 .blue-hover:active,
 .blue-hover:hover,
 .blue-hover:focus{
@@ -554,6 +592,11 @@ img {
 .imagine7,
 .imagine8,
 .imagine9{
+  position: relative;
+  height: 404px;
+  margin: 0px;
+  overflow: hidden;
+  align-items: center;
   background-color: #fff;
   justify-content: space-between;
   margin-bottom: 30px;
@@ -588,7 +631,6 @@ footer {
 }
 footer .container {
   padding-top: 60px;
-  padding-bottom: 60px;
 }
 footer .end {
   text-decoration-line: none;
@@ -607,17 +649,40 @@ footer address {
 footer .stat{
   color: var(--white);
 }
-.join .media{
+.join{
+  list-style: none;
   display: flex;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  padding: 25px 0;
+  align-items: center;
+  margin-top: 16px;
+  padding: 25px;
   background-color: var(--black);
   fill: var(--blue);
   border-radius: 50%;
   transition-property: fill, background-color;
   transition: var(--transition);
+}
+.join li{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 44px;
+  height: 44px;
+  padding: 0px;
+  background-color: var(--black);
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 10px;
+  fill: var(--blue);
+}
+.media{
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  fill: var(--white);
+}
+.foot-social{
+  margin-left: 180px;
+  padding-top: 5px;
 }
 footer .come-in{
   width: 113px;
@@ -652,7 +717,6 @@ footer .mail:focus {
   text-decoration: underline;
 }
 .backdrop{
-  cursor: not-allowed;
   opacity: 100%;
   align-items: center;
   position: fixed;
